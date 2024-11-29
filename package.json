@@ -1,5 +1,7 @@
 {
   "private": true,
+  "type": "module",
+  "version": "4.69.420",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

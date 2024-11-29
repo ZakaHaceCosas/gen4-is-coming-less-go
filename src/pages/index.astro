@@ -1,98 +1,175 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 
 export const prerender = true;
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+    <div class="timer">
+        <h1 class="title">OPERATION PHOENIX BRM5</h1>
+        <div class="countdown">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span
+                id="seconds">00</span
+            >
+        </div>
+        <p class="warning">GEN4 OFFICIAL TIMER 100% REAL NO FAKE</p>
+    </div>
+    <p>whats new with the update:</p>
+    <ol style="color: white">
+        <li>Performance improvements</li>
+        <li>
+            Rework of most guns (<a
+                href="https://docs.google.com/document/d/15CuwbpcZ42owrTo4FVtHsoKqZSRlATLx-Y6_t_bUtB8/edit"
+                target="_blank"
+            >
+                Confused Yeen did a great document showing all of them
+            </a>, it's LONG)
+        </li>
+        <li>Removal of intel mechanic (bunker still exists)</li>
+        <li>
+            Removal of A-10 (DON'T SELL THAT THING, you'll get a higher refund
+            if you wait for update)
+        </li>
+        <li>New locations</li>
+        <li>New guns</li>
+        <li>New vehicles</li>
+        <li>
+            Mobile support (idk if it's releasing alongside the update or later,
+            but Gnar said it's a thing)
+        </li>
+        <li>Inventory mechanic</li>
+        <li>Ammo mag mechanic</li>
+        <li>Sliding</li>
+        <li>Animation rework</li>
+        <li>Every shitty bug from current Gen3 should be fixed (should)</li>
+        <li>New PvP maps</li>
+        <li>Rework of existing PvP maps</li>
+        <li>New zombie mode (yes)</li>
+        <li>
+            New heli physics (people call it Arma3-like if that helps you get an
+            idea)
+        </li>
+        <li>Reworked map (still Ronograd Island but like better)</li>
+        <li>LGMs (thanks @decreers)</li>
+        <li>
+            Ability to lock your doors/turrets so "zero stars" don't annoy you
+        </li>
+        <li>
+            Stars are renamed to levels (that's why I put "zero stars" between
+            colons before)
+        </li>
+        <li>In-game pause menu to change settings and see stuff</li>
+        <li>In-game map</li>
+        <li>Private squads (invite-based)</li>
+        <li>UI redesign</li>
+        <li>A detection meter</li>
+        <li>
+            New raid system (now there's a bar showing you stuff like remaining
+            enemy waves, and they changed more stuff I don't remember right now)
+        </li>
+        <li><em>(Still looking up, I think there was more stuff)</em></li>
+    </ol>
+    <p>this is so fucking rushed, i'll</p>
 </Layout>
 
+<script>
+    /* javascript javascript go brr */
+    const countdown = () => {
+        const now = new Date();
+        const tomorrow = new Date();
+        tomorrow.setDate(now.getDate() + 1);
+        tomorrow.setHours(3, 0, 0, 0);
+
+        // @ts-ignore bitchy error
+        const diff = tomorrow - now;
+
+        if (diff <= 0) {
+            document.querySelector(".countdown")!.innerHTML =
+                "IT'S 3AM. PANIC!";
+            return;
+        }
+
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("hours")!.textContent = String(hours).padStart(
+            2,
+            "0"
+        );
+        document.getElementById("minutes")!.textContent = String(
+            minutes
+        ).padStart(2, "0");
+        document.getElementById("seconds")!.textContent = String(
+            seconds
+        ).padStart(2, "0");
+    };
+
+    setInterval(countdown, 1000);
+    countdown();
+</script>
+
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
+    /* inline css go brr */
+    body {
+        background: url("https://www.transparenttextures.com/patterns/black-linen.png"),
+            #242424;
+        color: red;
+        font-family: "Montserrat";
+        overflow-x: hidden;
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        line-height: 110%;
+    }
 
-	h1 {
-		margin: 2rem 0;
-	}
+    img {
+        width: 30%;
+        height: auto;
+        object-fit: scale-down;
+    }
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
+    .timer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        line-height: 160%;
+    }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+    .title {
+        text-shadow: 0 0 25px red;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+    .countdown {
+        font-size: 10em;
+        color: #f6d236;
+        text-shadow: 0 0 45px #f6d236;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
+    .warning {
+        font-size: 1.25em;
+        color: red;
+        text-shadow: 0 0 25px red;
+        font-weight: 600;
+    }
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
+    a {
+        color: #f6d236
+    }
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+    a:hover {
+        text-shadow: 0px 0px 25px #f6d236
+    }
 </style>
