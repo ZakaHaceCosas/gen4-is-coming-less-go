@@ -78,15 +78,15 @@ export const prerender = true;
             </li>
             <li><em>(Still looking up, I think there was more stuff)</em></li>
         </ol>
+        <p style="color: white;">
+            this is so fucking rushed, i'm trying to keep this list updated. LAST
+            UPDATE @ 0:25:09 spanish time, DM <code>@leoptix</code> on discord (or <a
+                href="https://github.com/ZakaHaceCosas/gen4-is-coming-less-go"
+                rel="noopener noreferrer"
+                target="_blank">open this on github</a
+            > if you know AstroJS) to add stuff i'm missing. thank you).
+        </p>
     </div>
-    <p style="color: white;">
-        this is so fucking rushed, i'm trying to keep this list updated. LAST
-        UPDATE @ 0:25:09 spanish time, DM <code>@leoptix</code> on discord (or <a
-            href="https://github.com/ZakaHaceCosas/gen4-is-coming-less-go"
-            rel="noopener noreferrer"
-            target="_blank">open this on github</a
-        > if you know AstroJS) to add stuff i'm missing. thank you).
-    </p>
 </Layout>
 
 <script>
@@ -135,11 +135,12 @@ export const prerender = true;
         overflow-x: hidden;
         max-width: 100vw;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 10px;
         line-height: 110%;
+        scrollbar-width: none;
     }
 
     img {
@@ -154,28 +155,31 @@ export const prerender = true;
         gap: 50px;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 60vw;
         min-height: 80vh;
         line-height: 160%;
+        overflow: hidden;
     }
 
     .changelog {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        width: 100%;
+        width: 40vw;
         align-items: flex-start;
         justify-content: flex-start;
+        overflow-y: scroll;
     }
 
     .stuff {
         text-shadow: 0 0 25px red;
         font-size: 2em;
         text-transform: uppercase;
+        text-align: center;
     }
 
     .countdown {
-        font-size: 10em;
+        font-size: 9em;
         color: #f6d236;
         text-shadow: 0 0 45px #f6d236;
         font-weight: bold;
