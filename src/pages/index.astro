@@ -4,72 +4,89 @@ import Layout from "../layouts/Layout.astro";
 export const prerender = true;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="update is cancelled">
     <div class="timer">
-        <h1 class="title">OPERATION PHOENIX BRM5</h1>
+        <h1 class="stuff">
+            <span style="color: white;">BLACKHAWK RESCUE MISSION FIVE</span> OPERATION
+            PHOENIX
+        </h1>
         <div class="countdown">
             <span id="hours">00</span>:<span id="minutes">00</span>:<span
                 id="seconds">00</span
             >
         </div>
-        <p class="warning">GEN4 OFFICIAL TIMER 100% REAL NO FAKE</p>
+        <p class="stuff">LEFT UNTIL THE GEN4 DROPS</p>
     </div>
-    <p>whats new with the update:</p>
-    <ol style="color: white">
-        <li>Performance improvements</li>
-        <li>
-            Rework of most guns (<a
-                href="https://docs.google.com/document/d/15CuwbpcZ42owrTo4FVtHsoKqZSRlATLx-Y6_t_bUtB8/edit"
-                target="_blank"
-            >
-                Confused Yeen did a great document showing all of them
-            </a>, it's LONG)
-        </li>
-        <li>Removal of intel mechanic (bunker still exists)</li>
-        <li>
-            Removal of A-10 (DON'T SELL THAT THING, you'll get a higher refund
-            if you wait for update)
-        </li>
-        <li>New locations</li>
-        <li>New guns</li>
-        <li>New vehicles</li>
-        <li>
-            Mobile support (idk if it's releasing alongside the update or later,
-            but Gnar said it's a thing)
-        </li>
-        <li>Inventory mechanic</li>
-        <li>Ammo mag mechanic</li>
-        <li>Sliding</li>
-        <li>Animation rework</li>
-        <li>Every shitty bug from current Gen3 should be fixed (should)</li>
-        <li>New PvP maps</li>
-        <li>Rework of existing PvP maps</li>
-        <li>New zombie mode (yes)</li>
-        <li>
-            New heli physics (people call it Arma3-like if that helps you get an
-            idea)
-        </li>
-        <li>Reworked map (still Ronograd Island but like better)</li>
-        <li>LGMs (thanks @decreers)</li>
-        <li>
-            Ability to lock your doors/turrets so "zero stars" don't annoy you
-        </li>
-        <li>
-            Stars are renamed to levels (that's why I put "zero stars" between
-            colons before)
-        </li>
-        <li>In-game pause menu to change settings and see stuff</li>
-        <li>In-game map</li>
-        <li>Private squads (invite-based)</li>
-        <li>UI redesign</li>
-        <li>A detection meter</li>
-        <li>
-            New raid system (now there's a bar showing you stuff like remaining
-            enemy waves, and they changed more stuff I don't remember right now)
-        </li>
-        <li><em>(Still looking up, I think there was more stuff)</em></li>
-    </ol>
-    <p>this is so fucking rushed, i'll</p>
+    <div class="changelog">
+        <h2 style="margin: 0;">
+            WHATS NEW WITH THE UPDATE - A <span style="font-weight: 100">(NOT SO)</span> FULL CHANGELOG:
+        </h2>
+        <ol style="color: white; margin-top: 0;">
+            <li>Performance improvements</li>
+            <li>
+                Rework of most guns (<a
+                    href="https://docs.google.com/document/d/15CuwbpcZ42owrTo4FVtHsoKqZSRlATLx-Y6_t_bUtB8/edit"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Confused Yeen did a great document showing all of them
+                </a>, it's LONG)
+            </li>
+            <li>Removal of intel mechanic (bunker still exists)</li>
+            <li>
+                Removal of A-10 (DON'T SELL THAT THING, you'll get a higher
+                refund if you wait for update)
+            </li>
+            <li>New locations</li>
+            <li>New guns</li>
+            <li>New vehicles</li>
+            <li>
+                Mobile support (idk if it's releasing alongside the update or
+                later, but Gnar said it's a thing)
+            </li>
+            <li>Inventory mechanic</li>
+            <li>Ammo mag mechanic</li>
+            <li>Sliding</li>
+            <li>Animation rework</li>
+            <li>Every shitty bug from current Gen3 should be fixed (should)</li>
+            <li>New PvP maps</li>
+            <li>Rework of existing PvP maps</li>
+            <li>New zombie mode (yes)</li>
+            <li>
+                New heli physics (people call it Arma3-like if that helps you
+                get an idea)
+            </li>
+            <li>Reworked map (still Ronograd Island but like better)</li>
+            <li>LGMs (thanks @decreers)</li>
+            <li>
+                Ability to lock your doors/turrets so "zero stars" don't annoy
+                you
+            </li>
+            <li>
+                Stars are renamed to levels (that's why I put "zero stars"
+                between colons before)
+            </li>
+            <li>In-game pause menu to change settings and see stuff</li>
+            <li>In-game map</li>
+            <li>Private squads (invite-based)</li>
+            <li>UI redesign</li>
+            <li>A detection meter</li>
+            <li>
+                New raid system (now there's a bar showing you stuff like
+                remaining enemy waves, and they changed more stuff I don't
+                remember right now)
+            </li>
+            <li><em>(Still looking up, I think there was more stuff)</em></li>
+        </ol>
+    </div>
+    <p style="color: white;">
+        this is so fucking rushed, i'm trying to keep this list updated. LAST
+        UPDATE @ 0:25:09 spanish time, DM <code>@leoptix</code> on discord (or <a
+            href="https://github.com/ZakaHaceCosas/gen4-is-coming-less-go"
+            rel="noopener noreferrer"
+            target="_blank">open this on github</a
+        > if you know AstroJS) to add stuff i'm missing. thank you).
+    </p>
 </Layout>
 
 <script>
@@ -112,8 +129,7 @@ export const prerender = true;
 <style>
     /* inline css go brr */
     body {
-        background: url("https://www.transparenttextures.com/patterns/black-linen.png"),
-            #242424;
+        background-color: #000;
         color: red;
         font-family: "Montserrat";
         overflow-x: hidden;
@@ -143,7 +159,16 @@ export const prerender = true;
         line-height: 160%;
     }
 
-    .title {
+    .changelog {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .stuff {
         text-shadow: 0 0 25px red;
         font-size: 2em;
         text-transform: uppercase;
@@ -159,18 +184,11 @@ export const prerender = true;
         gap: 10px;
     }
 
-    .warning {
-        font-size: 1.25em;
-        color: red;
-        text-shadow: 0 0 25px red;
-        font-weight: 600;
-    }
-
     a {
-        color: #f6d236
+        color: #f6d236;
     }
 
     a:hover {
-        text-shadow: 0px 0px 25px #f6d236
+        text-shadow: 0px 0px 25px #f6d236;
     }
 </style>

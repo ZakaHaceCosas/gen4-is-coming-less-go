@@ -5,5 +5,5 @@ export default defineConfig({
   output: 'server',
   adapter: vercelServerless({
     imageService: true,
-  }),
+  }), // (didnt touch it, idk what is vercel doing lmao)
 });
