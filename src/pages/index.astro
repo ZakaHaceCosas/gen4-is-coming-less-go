@@ -6,7 +6,10 @@ export const prerender = true;
 
 <Layout title="update is cancelled">
     <div class="timer">
-        <h1 class="stuff">THANKS EVERYONE FOR STAYING, i love this community ngl. Been pleased to meet it.</h1>
+        <h1 class="stuff">
+            THANKS EVERYONE FOR STAYING, i love this community ngl. Been pleased
+            to meet it.
+        </h1>
         <h1 class="stuff">
             <span style="color: white;">BLACKHAWK RESCUE MISSION FIVE</span> OPERATION
             PHOENIX
@@ -17,7 +20,9 @@ export const prerender = true;
             >
         </div>
         <p class="stuff">
-            (delays to avoid data loss may occur)
+            DELAYED TO AVOID DATA LOSS
+            <br />
+            why is the discord rioting again
             <br />
             <span style="font-size:25px; font-weight: 400; color: white">
                 BASED ON OFFICIAL RELEASE DATE (12PM AEST)
@@ -163,20 +168,17 @@ export const prerender = true;
         }
 
         if (trickedDiff >= releaseDate && trickedDiff <= 97200) {
-            const colors = [
-                "#fb140b",
-                "#f6d236",
-                "#2860de",
-                "#fff"
-            ];
+            const colors = ["#fb140b", "#f6d236", "#2860de", "#fff"];
 
             let i = 0;
 
             function e() {
-                const elem = document.querySelector(".countdown") as HTMLElement;
+                const elem = document.querySelector(
+                    ".countdown"
+                ) as HTMLElement;
                 const c = colors[Math.floor(Math.random() * colors.length)];
                 elem.style.color = c;
-                elem.style.textShadow = `0 0 75px ${c}`
+                elem.style.textShadow = `0 0 75px ${c}`;
             }
 
             setInterval(e, 950);
