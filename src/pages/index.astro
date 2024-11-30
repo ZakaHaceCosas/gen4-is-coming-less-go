@@ -100,7 +100,10 @@ export const prerender = true;
                 Stars are renamed to levels (so "zero star" is now "zero level"
                 i guess) (TECH DEMO #1)
             </li>
-            <li>In-game pause menu to change settings and see stuff (TECH DEMO #1)</li>
+            <li>
+                In-game pause menu to change settings and see stuff (TECH DEMO
+                #1)
+            </li>
             <li>In-game map (TECH DEMO #1)</li>
             <li>Private squads (invite-based) (TECH DEMO #1)</li>
             <li>UI redesign (TECH DEMO #1, #2)</li>
@@ -150,10 +153,31 @@ export const prerender = true;
 
         const diff = tomorrow.getTime() - nowInSpain.getTime();
 
-        if (diff <= 0) {
-            document.querySelector(".countdown")!.innerHTML =
-                "IT'S 3AM. PANIC!";
+        const trickedDiff = diff / 1000;
+        const releaseDate = 86400;
+
+        if (trickedDiff <= releaseDate) {
+            document.querySelector(".countdown")!.innerHTML = "OUT!!!";
             return;
+        }
+
+        if (trickedDiff >= releaseDate && trickedDiff <= 97200) {
+            const colors = [
+                "#fb140b",
+                "#f6d236",
+                "#2860de"
+            ];
+
+            let i = 0;
+
+            function e() {
+                const elem = document.querySelector(".countdown") as HTMLElement;
+                const c = colors[Math.floor(Math.random() * colors.length)];
+                elem.style.color = c;
+                elem.style.textShadow = `0 0 75px ${c}`
+            }
+
+            setInterval(e, 1000);
         }
 
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
